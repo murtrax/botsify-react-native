@@ -18,6 +18,11 @@ class SidebarContainer extends Component {
         icon: "albums"
       },
       {
+        name: "Chat",
+        route: "Chat",
+        icon: "albums"
+      },
+      {
         name: "Logout",
         route: "Logout",
         icon: "log-out"
