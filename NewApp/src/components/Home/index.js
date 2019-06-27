@@ -25,7 +25,7 @@ export default class Home extends Component {
           <Right style={styles.headerRight}/>
         </Header>
         <Content>
-          <Text style={{ alignSelf: "center", marginTop: 10}}>React Native Starter Kit v2.7.2</Text>
+          <Text style={{ alignSelf: "center", marginTop: 10}}>Botsify App</Text>
         </Content>
       </Container>
     );
