@@ -17,7 +17,7 @@ export default class Login extends Component {
           <View style={styles.containerForm}>
             <View style={styles.contentForm}>
               {this.props.loginForm}
-              <Button block onPress={() => this.props.onLogin()} style={styles.buttonLogin}>
+              <Button block onPress={() => this.props.onLogin()} style={[styles.buttonLogin,{backgroundColor:'#7CD1E9'}]}>
                 <Text uppercase={false} style={styles.textLogin}>Login</Text>
               </Button>
             </View>

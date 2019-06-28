@@ -16,23 +16,7 @@ class SideBar extends Component {
           <Text style={styles.organizerName}>Demo Account</Text>
         </View>
         <Content bounces={false}>
-          <List
-            dataArray={this.props.data}
-            renderRow={data => {
-              if (data.route === "Logout") {
-                return null;
-              } else {
-                return <ListItem style={styles.menuItem} onPress={() => this.props.onPress(data)}>
-                  <Icon
-                    active
-                    name={data.icon}
-                    style={{ color: "#777", fontSize: 26, width: 30 }}
-                  />
-                  <Text style={styles.menuText}>{data.name}</Text>
-                </ListItem>;
-              }
-            }}
-          />
+          
         </Content>
         <TouchableOpacity style={styles.footer} onPress={() => this.props.onPress(logoutMenu)}>
           <Icon

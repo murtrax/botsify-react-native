@@ -17,39 +17,7 @@ export default {
       fontWeight:'bold',
       fontSize:22
   },
-    row: {
-    flexDirection: 'row',
-    paddingHorizontal: 20,
-    marginTop: 20,
-  },
-    scrollcontainer: {
-   flex: 1,
-    backgroundColor: '#ffffff',
-    paddingHorizontal: 15,
-    paddingTop: 20,
-  },
-    mainHeading:{
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: '#1d1d1d',
-        fontWeight:'bold',
-        fontSize:26
-        
-    },
-   
-   item: {
-    flex: 1,
-    height: 120,
-    paddingVertical: 20,
-    borderColor: '#d1d1d1',
-    borderWidth: 1.25,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    marginHorizontal: 20,
-  },
-    
-  CurveHeaderText: {
+          CurveHeaderText: {
     alignSelf: "center",
     marginTop: 10,
     marginBottom: 10,
@@ -86,7 +54,37 @@ BotsSection:{
     //flexDirection: "column",
 
   },
-
+    row: {
+    flexDirection: 'row',
+    paddingHorizontal: 20,
+    marginTop: 20,
+  },
+    scrollcontainer: {
+   flex: 1,
+    backgroundColor: '#ffffff',
+    paddingHorizontal: 15,
+    paddingTop: 20,
+  },
+    mainHeading:{
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#1d1d1d',
+        fontWeight:'bold',
+        fontSize:26
+        
+    },
+   
+   item: {
+    flex: 1,
+    height: 120,
+    paddingVertical: 20,
+    borderColor: '#d1d1d1',
+    borderWidth: 1.25,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    marginHorizontal: 20,
+  },
   itemText: {
     color: '#000000',
     fontFamily: 'Lato-Regular',
