@@ -8,4 +8,3 @@ export default class HomeContainer extends Component {
     );
   }
 }
-
