@@ -1,154 +1,235 @@
-export default {
-  container: {
+export default
+{
+  container:
+   {
     flex: 1,
-    backgroundColor: "#ffffff"
+    backgroundColor: "#ffffff",
+    },
+
+  outerContainer:
+  {
+    //borderRadius: 15,
+    backgroundColor: "#7CD1E9"
   },
-  headerLeft: {
+
+  innerContainer:
+  {
+      backgroundColor: "#ffffff",
+      borderTopLeftRadius: 15
+  },
+
+  headerLeft:
+  {
     flex: 0.3
   },
-  headerBody: {
+
+  headerBody:
+  {
     flex: 0.4
   },
-  textBody:{
+
+  textBody:
+  {
     alignSelf: "center",
     color: "#ffffff",
+    fontSize: 25,
+    marginTop: -40
+  },
+
+  headerRight:
+  {
+    flex: 0.3
+  },
+
+  chat:
+  {
+    height: 30,
+    width: 30,
+    marginTop: 8
+  },
+
+  yourBots:
+  {
+    marginLeft: 25,
+    marginTop: 20,
+    fontWeight: "bold",
     fontSize: 25
   },
 
-  headerRight: {
-    flex: 0.3
-  },
-
-  Text:
+  View1:
   {
-    marginTop: 30,
-    marginLeft: 32,
-    fontSize: 20,
-    fontWeight: "bold"
-  },
+    resizeMode: "contain",
+    flexDirection: "row",
+    marginTop: 30
 
-  robot1:
-  {
-    marginTop: 35,
-    marginLeft: 35,
-    height: 100,
-    width: 100,
-    paddingTop: 10,
-    alignSelf: "flex-start",
-    borderWidth: 3,
-    borderColor: "#7CD1E9",
-    paddingLeft: 10
-  },
-
-  robot2:
-  {
-    marginTop: 35,
-    marginLeft: 35,
-    height: 100,
-    width: 100,
-    padding: 1,
-    alignSelf: "flex-start",
-    borderWidth: 3,
-    borderColor: "#7CD1E9"
-  },
-
-  robot3:
-  {
-    marginTop: 35,
-    marginLeft: 35,
-    height: 100,
-    width: 100,
-    padding: 1,
-    alignSelf: "flex-start",
-    borderWidth: 3,
-    borderColor: "#7CD1E9"
-  },
-
-  robot4:
-  {
-
-    marginTop: -467,
-    marginLeft: 200,
-    height: 100,
-    width: 100,
-    padding: 1,
-    alignSelf: "flex-start",
-    borderWidth: 3,
-    borderColor: "#7CD1E9"
-  },
-
-  robot5:
-  {
-    marginTop: -300,
-    marginLeft: 200,
-    height: 100,
-    width: 100,
-    padding: 1,
-    alignSelf: "flex-start",
-    borderWidth: 3,
-    borderColor: "#7CD1E9"
-  },
-
-  robot6:
-  {
-    marginTop: -130,
-    marginLeft: 200,
-    height: 100,
-    width: 100,
-    padding: 13,
-    alignSelf: "flex-start",
-    borderWidth: 3,
-    borderColor: "#7CD1E9"
   },
 
   bot1:
   {
-    marginLeft: 65,
-    marginTop: 10
+    marginLeft: 30,
+    backgroundColor: "#ffffff",
+    borderColor: "#7CD1E9",
+    borderWidth: 2,
+    paddingVertical: 12,
+    paddingHorizontal: 20
 
   },
 
   bot2:
   {
-    marginLeft: 65,
-    marginTop: 10
+
+    marginLeft: 45,
+    backgroundColor: "#ffffff",
+    borderColor: "#7CD1E9",
+    borderWidth: 2,
+    paddingVertical: 12,
+    paddingHorizontal: 20
+
+  },
+
+  img1:
+  {
+    height: 80,
+    width: 80
+
+  },
+
+  img2:
+  {
+    height: 80,
+    width: 80
+  },
+
+  imgText1:
+  {
+    fontSize: 17,
+    marginTop: 10,
+    alignSelf: "center"
+  },
+
+  imgText2:
+  {
+    fontSize: 17,
+    marginTop: 10,
+    alignSelf: "center"
+  },
+
+  View2:
+  {
+    resizeMode: "contain",
+    flexDirection: "row",
+    marginTop: 20
 
   },
 
   bot3:
   {
-    marginLeft: 65,
-    marginTop: 10
+    marginLeft: 30,
+    backgroundColor: "#ffffff",
+    borderColor: "#7CD1E9",
+    borderWidth: 2,
+    paddingVertical: 12,
+    paddingHorizontal: 20
 
   },
 
   bot4:
   {
-    marginLeft: 230,
-    marginTop: 10
+    marginLeft: 45,
+    backgroundColor: "#ffffff",
+    borderColor: "#7CD1E9",
+    borderWidth: 2,
+    paddingVertical: 12,
+    paddingHorizontal: 20
+
+  },
+
+  img3:
+  {
+    height: 80,
+    width: 80
+
+  },
+
+  img4:
+  {
+    height: 80,
+    width: 80
+  },
+
+  imgText3:
+  {
+    fontSize: 17,
+    marginTop: 10,
+    alignSelf: "center"
+  },
+
+  imgText4:
+  {
+    fontSize: 17,
+    marginTop: 10,
+    alignSelf: "center"
+  },
+
+  View3:
+  {
+    resizeMode: "contain",
+    flexDirection: "row",
+    marginTop: 20
 
   },
 
   bot5:
   {
-    marginLeft: 230,
-    marginTop: 10
+    marginLeft: 30,
+    backgroundColor: "#ffffff",
+    borderColor: "#7CD1E9",
+    borderWidth: 2,
+    paddingVertical: 12,
+    paddingHorizontal: 20
 
   },
 
   bot6:
   {
-    marginLeft: 230,
-    marginTop: 10
+    marginLeft: 45,
+    backgroundColor: "#ffffff",
+    borderColor: "#7CD1E9",
+    borderWidth: 2,
+    paddingVertical: 12,
+    paddingHorizontal: 20
 
   },
 
-  padding:
+  img5:
   {
-    paddingVertical: 20,
-    paddingHorizontal: 20,
-    borderWidth: 3
+    height: 80,
+    width: 80
+
   },
+
+  img6:
+  {
+    height: 80,
+    width: 80
+  },
+
+  imgText5:
+  {
+    fontSize: 17,
+    marginTop: 10,
+    alignSelf: "center"
+  },
+
+  imgText6:
+  {
+    fontSize: 17,
+    marginTop: 10,
+    alignSelf: "center"
+  },
+
+
+
 
 
 

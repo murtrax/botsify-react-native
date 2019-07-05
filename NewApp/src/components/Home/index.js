@@ -8,6 +8,7 @@ import styles from "./styles";
 import { Image, View, TouchableOpacity } from "react-native";
 
 const robot = require("../../../assets/robot.png");
+const logo = require("../../../assets/chat2.png");
 
 export default class Home extends Component {
  onList()
@@ -28,50 +29,65 @@ export default class Home extends Component {
 
           </Left>
           <Body style={styles.headerBody}>
+            <Image style= {styles.chat}
+              source = {logo}>
+            </Image>
           <Title style={styles.textBody}>Botsify</Title>
           </Body>
           <Right style={styles.headerRight}/>
         </Header>
 
         <Content>
-          <Text style = {styles.Text}>Your Bots</Text>
+        <View style = {styles.outerContainer}>
+          <View style = {styles.innerContainer}>
+        <View>
+          <Text style = {styles.yourBots}> Your Bots</Text>
+        </View>
 
-          <TouchableOpacity style= {styles.padding} onPress={() => this.onList()}>
-            <Image style={styles.robot1}
+        <View style = {styles.View1}>
+          <TouchableOpacity style= {styles.bot1} onPress={() => this.onList()}>
+            <Image style={styles.img1}
             source={robot}></Image>
-            <Text style= {styles.bot1}>Bot1</Text>
+            <Text style= {styles.imgText1}>Bot1</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => this.onList()}>
-            <Image style={styles.robot2}
+          <TouchableOpacity style = {styles.bot2 } onPress={() => this.onList()}>
+            <Image style={styles.img2}
             source={robot}></Image>
-            <Text style= {styles.bot1}>Bot2</Text>
+            <Text style= {styles.imgText2}>Bot2</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style = {styles.View2}>
+          <TouchableOpacity style= {styles.bot3} onPress={() => this.onList()}>
+            <Image style={styles.img3}
+            source={robot}></Image>
+            <Text style= {styles.imgText3}>Bot3</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => this.onList()}>
-            <Image style={styles.robot3}
+          <TouchableOpacity style = {styles.bot4 } onPress={() => this.onList()}>
+            <Image style={styles.img4}
             source={robot}></Image>
-            <Text style= {styles.bot1}>Bot3</Text>
+            <Text style= {styles.imgText4}>Bot4</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style = {styles.View3}>
+          <TouchableOpacity style= {styles.bot5} onPress={() => this.onList()}>
+            <Image style={styles.img5}
+            source={robot}></Image>
+            <Text style= {styles.imgText5}>Bot5</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => this.onList()}>
-            <Image style={styles.robot4}
+          <TouchableOpacity style = {styles.bot6 } onPress={() => this.onList()}>
+            <Image style={styles.img6}
             source={robot}></Image>
-            <Text style= {styles.bot4}>Bot4</Text>
+            <Text style= {styles.imgText6}>Bot6</Text>
           </TouchableOpacity>
+        </View>
 
-          <TouchableOpacity onPress={() => this.onList()}>
-            <Image style={styles.robot5}
-            source={robot}></Image>
-            <Text style= {styles.bot5}>Bot5</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity onPress={() => this.onList()}>
-            <Image style={styles.robot6}
-            source={robot}></Image>
-            <Text style= {styles.bot6}>Bot6</Text>
-          </TouchableOpacity>
-
+          </View>
+          </View>
           </Content>
       </Container>
     );
