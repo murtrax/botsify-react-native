@@ -15,6 +15,7 @@ export default class Home extends Component {
   {
     this.props.navigation.navigate("List")
   }
+
   render() {
     return (
       <Container style={styles.container}>

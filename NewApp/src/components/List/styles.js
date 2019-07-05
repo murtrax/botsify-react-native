@@ -2,20 +2,44 @@ export default
 {
   textBody:
   {
-    color: "#ffffff",
     alignSelf: "center",
+    color: "#ffffff",
     fontSize: 25,
-    marginLeft: 70,
-    marginTop: -40,
+    marginTop: 10,
+    marginLeft: 20,
+    marginRight: 50
 
   },
 
-  chat:
+  backArrow:
   {
-    height: 35,
-    width: 35,
-    marginTop: 3,
-    marginLeft: 40,
-    paddingRight: 10
+    height: 25,
+    width: 25
+
+  },
+
+  Arrow:
+  {
+    alignSelf: "flex-start",
+    marginTop: 10,
+    marginLeft: -19
+
+  },
+
+  container:
+   {
+    flex: 1,
+    //backgroundColor: "#ffffff",
+    },
+
+  outerContainer:
+  {
+    backgroundColor: "#7CD1E9"
+  },
+
+  innerContainer:
+  {
+      backgroundColor: "#ffffff",
+      borderTopLeftRadius: 15
   },
 };

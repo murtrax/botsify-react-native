@@ -8,7 +8,6 @@ export default
 
   outerContainer:
   {
-    //borderRadius: 15,
     backgroundColor: "#7CD1E9"
   },
 

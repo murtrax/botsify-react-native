@@ -3,7 +3,9 @@ import {
   Header, Left, Container, Button, Body, Title, Right, Icon, Text, Content} from "native-base";
 import { StatusBar } from "react-native";
 import styles from "./styles";
-const chat = require("../../../assets/chat.png");
+const chat = require("../../../assets/chat2.png");
+const arrow = require("../../../assets/back.png");
+import {DrawerItems} from "react-native";
 import { Image, View, TouchableOpacity } from "react-native";
 
 export default class List extends Component {
@@ -21,13 +23,22 @@ export default class List extends Component {
 
           </Left>
           <Body style={styles.headerBody}>
-          <Image style = {styles.chat} source = {chat}></Image>
-          <Title style={styles.textBody}>Botsify</Title>
+          <View style = {styles.Arrow}>
+            <TouchableOpacity>
+            <Image style = {styles.backArrow} source = {arrow}></Image>
+            </TouchableOpacity>
+          </View>
+          
           </Body>
+          <Title style={styles.textBody}>User 1</Title>
           <Right style={styles.headerRight}/>
         </Header>
         <Content>
+          <View style = {styles.outerContainer}>
+          <View style = {styles.innerContainer}>
 
+          </View>
+          </View>
 
         </Content>
       </Container>
