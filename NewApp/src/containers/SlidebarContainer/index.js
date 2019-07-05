@@ -17,6 +17,11 @@ class SidebarContainer extends Component {
         route: "Modal",
         icon: "albums"
       },
+      {   
+        name: "Bot Detail",
+        route: "BotDetail",
+        icon: "albums"
+      },
       {
         name: "Logout",
         route: "Logout",
