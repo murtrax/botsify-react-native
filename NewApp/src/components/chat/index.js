@@ -12,10 +12,14 @@ export default class Chat extends Component {
     chatStrip : {marginLeft: 25,
       marginRight: 25,
       marginBottom: 5,
-      borderColor: "white",
-      borderWidth: 1,
+      borderWidth: 0,
       borderRadius: 4,
-      flexDirection: "row",}
+      flexDirection: "row",
+      shadowColor: "#000",
+      shadowOffset: { width: 2, height: 2 },
+      shadowOpacity: 0.8,
+      shadowRadius: 2,
+      elevation: 3,    }
   }
 
   shadow = () => {
@@ -24,12 +28,11 @@ export default class Chat extends Component {
       shadowOffset: { width: 2, height: 2 },
       shadowOpacity: 0.8,
       shadowRadius: 2,
-      elevation: 4,      
+      elevation: 3,
       marginLeft: 25,
       marginRight: 25,
       marginBottom: 5,
-      borderColor: "white",
-      borderWidth: 1,
+      borderWidth: 0,
       borderRadius: 4,
       flexDirection: "row", }}
     )
@@ -100,20 +103,25 @@ export default class Chat extends Component {
                   <View style={this.state.chatStrip}>
                 <Image source={avatar} style = {styles.chatImage}/>
                 <View>
+                  <View style={{flexDirection: "row"}}>
                 <Text style= {styles.usernameChat}>Roger</Text>
-                <Text key={index} style= {styles.chatText}>{item}{index}</Text>
-                </View>
-                <View style={{alignItems: "center"}}>
                 <Text style={styles.timeText}> 11:57am</Text>
                 </View>
                 
+                <View style={{flexDirection: "column"}}>
+                <Text key={index} style= {styles.chatText}>{item}{index}</Text>
+                </View>
+                </View>
+
               </View>
               </TouchableHighlight>
-              <View style={{
+
+              {/*<View style={{
                 borderBottomColor: "black",
                 borderBottomWidth: 1, flexDirection: "column", marginLeft: 110, marginRight: 40
               }}
-            />
+            />*/}
+
               </View>
 
             }
@@ -151,3 +159,29 @@ export default class Chat extends Component {
     );
   }
 }
+
+
+
+{/*<View><TouchableHighlight onPress = {()=> this.shadow()}>
+                  <View style={this.state.chatStrip}>
+                <Image source={avatar} style = {styles.chatImage}/>
+                <View>
+                  <View style={{flexDirection: "row"}}>
+                <Text style= {styles.usernameChat}>Roger</Text>
+                <Text style={styles.timeText}> 11:57am</Text>
+                </View>
+                <View style={{flexDirection: "column"}}>
+                <Text key={index} style= {styles.chatText}>{item}{index}</Text>
+                </View>
+                </View>
+
+              </View>
+              </TouchableHighlight>
+
+              {/*<View style={{
+                borderBottomColor: "black",
+                borderBottomWidth: 1, flexDirection: "column", marginLeft: 110, marginRight: 40
+              }}
+            />}
+
+          </View>*/ }

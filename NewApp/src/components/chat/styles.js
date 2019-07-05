@@ -111,7 +111,6 @@ export default {
         borderColor: "black",
         borderWidth: 0,
         borderRadius: 4,
-        flexDirection: "row",
       },
 
       chatImage: {
@@ -122,21 +121,22 @@ export default {
         borderWidth: 2,
         marginBottom: 13,
         borderRadius: 55 / 2,
-        },
-
-        sectionHeader: {
-          paddingTop: 2,
-          paddingLeft: 10,
-          paddingRight: 10,
-          paddingBottom: 2,
-          color: "black",
-          fontSize: 20,
-          marginLeft: 25,
-          marginTop: 25,
-          marginBottom: 10,
-          fontWeight: "bold",
-          backgroundColor: "white",
       },
+
+      sectionHeader: {
+        paddingTop: 2,
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingBottom: 2,
+        color: "black",
+        fontSize: 20,
+        marginLeft: 25,
+        marginTop: 25,
+        marginBottom: 10,
+        fontWeight: "bold",
+        backgroundColor: "white",
+      },
+
       item: {
           padding: 10,
           fontSize: 18,
@@ -165,9 +165,18 @@ export default {
         color: "#626f78",
         fontSize: 11,
         textAlign: "right",
-        marginRight: 10,
+        alignSelf: "stretch",
+        marginRight: 0,
         marginTop: 10,
         marginBottom: 5,
-        alignSelf: "stretch"
+        marginLeft: 50,
+      },
+
+      horizontalLine: {
+        borderBottomColor: "black",
+        borderBottomWidth: 1, 
+        flexDirection: "column",
+        marginLeft: 110, 
+        marginRight: 40
       }
   };
