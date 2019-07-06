@@ -14,7 +14,8 @@ export default
   innerContainer:
   {
       backgroundColor: "#ffffff",
-      borderTopLeftRadius: 15
+      borderTopLeftRadius: 15,
+      borderTopRightRadius: 15
   },
 
   headerLeft:
