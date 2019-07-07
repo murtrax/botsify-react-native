@@ -10,7 +10,7 @@ export const userLoginSuccess = ({ email, password }) => ({
     client: "default",
     request: {
       method: "POST",
-      url: "/login-success",
+      url: "/api/v1/login",
       data: {
         email,
         password

@@ -1,4 +1,8 @@
 rootProject.name = 'ReactNativeStarter'
+include ':react-native-material-shadows'
+project(':react-native-material-shadows').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-material-shadows/android')
+include ':react-native-svg'
+project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
 include ':react-native-vector-icons'
 project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 include ':react-native-splash-screen'

@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import {  Header, Left, Container, Button, Body, Title, Right, Icon, Text, Content } from "native-base";
-import { View,StatusBar,TouchableOpacity,Image,ScrollView } from "react-native";
+import { View,StatusBar,TouchableOpacity,TouchableHighlight,Image,ScrollView } from "react-native";
 import styles from "./styles";
+import {BoxShadow} from 'react-native-shadow'   
+const headerlogo = require('../../../assets/headerlogo.png');
 const Avatar = require('../../../assets/default-avatar.png');
+const imgA = require('../../../assets/1.jpg');
+const imgB = require('../../../assets/2.jpg');
+const imgC = require('../../../assets/3.jpg');
 export default class BotDetail extends Component {
     constructor(props) {
         super(props);
@@ -14,6 +19,17 @@ export default class BotDetail extends Component {
       this.props.navigation.navigate("MyChat")
   }
   render() {
+        const shadowOpt = {
+            height:45,
+            color:"#000000",
+            border:8,
+            radius:8,
+            opacity:0.1,
+            x:0,
+            y:4,
+            blur:14,
+            style:{marginVertical:5,marginHorizontal:20}
+        }
     return (
       <Container style={styles.container}>
         <StatusBar translucent={false}/>
@@ -21,10 +37,14 @@ export default class BotDetail extends Component {
               noShadow
               iosBarStyle={"dark-content"}
               androidStatusBarColor={"#fff"}
-              style={[styles.curvyheader,{ borderBottomWidth: 0,backgroundColor:'#7CD1E9' }]}>
-              <Body style={styles.headerBody}>
-              <Title style={styles.textBody}>Bot Detail</Title>
-              </Body>
+              style={{ borderBottomWidth: 0,backgroundColor:'#7CD1E9' }}>
+                  <Body style={styles.headerBody}>
+                        <Image
+                            resizeMode="contain"
+                            source={headerlogo}
+                            style={styles.textBody}
+                            />
+                  </Body>
             </Header>
                  <View style={styles.BotsSection}>
                     <View  style={{flex:1, backgroundColor: "#7CD1E9"}}>
@@ -34,311 +54,272 @@ export default class BotDetail extends Component {
                     </View>
                 </View>
                 <Content>
-                        <View style={{marginLeft:10,flex:1,paddingVertical: 10}}>
-                            <Text style={styles.minHeading}>
-                                Active Users
-                            </Text>
+                        <View style={{backgroundColor:'#F5F5F5',paddingVertical: 15}}>
+                            <View style={{marginLeft:10,flex:1,paddingVertical: 5}}>
+                                <Text style={styles.minHeading}>
+                                    Active Users
+                                </Text>
+                            </View>
+                            <View style={{paddingVertical:15,paddingHorizontal:15}}>
+                                <ScrollView
+                                    horizontal={true}
+                                    showsHorizontalScrollIndicator={false}
+                                    >
+                                    <View style={{backgroundColor: 'transparent', marginLeft:15}} >
+                                        <TouchableOpacity style={{
+                                            height: 65,
+                                            width: 65,
+                                            borderColor: '#7CD1E9',
+                                            borderWidth: 2,
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: 'transparent',
+                                            alignSelf: 'center',
+                                            borderRadius: 65/2
+                                          }}
+                                            onPress={() => this.chathistory()}
+                                        >
+                                            <Image  source={imgA} style={styles.itemThreeeImage} />
+                                        </TouchableOpacity>
+                                        <Text style={styles.activetext}>User 1</Text>
+                                    </View>
+                                    <View style={{backgroundColor: 'transparent', marginLeft:15}} >
+                                        <TouchableOpacity style={{
+                                            height: 65,
+                                            width: 65,
+                                            borderColor: '#7CD1E9',
+                                            borderWidth: 2,
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: 'transparent',
+                                            alignSelf: 'center',
+                                            borderRadius: 65/2
+                                          }}
+                                            onPress={() => this.chathistory()}
+                                        >
+                                            <Image  source={imgB} style={styles.itemThreeeImage} />
+                                        </TouchableOpacity>
+                                        <Text style={styles.activetext}>User 1</Text>
+                                    </View>
+                                    <View style={{backgroundColor: 'transparent', marginLeft:15}} >
+                                        <TouchableOpacity style={{
+                                            height: 65,
+                                            width: 65,
+                                            borderColor: '#7CD1E9',
+                                            borderWidth: 2,
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: 'transparent',
+                                            alignSelf: 'center',
+                                            borderRadius: 65/2
+                                          }}
+                                            onPress={() => this.chathistory()}
+                                        >
+                                            <Image  source={imgC} style={styles.itemThreeeImage} />
+                                        </TouchableOpacity>
+                                        <Text style={styles.activetext}>User 1</Text>
+                                    </View>
+                                    <View style={{backgroundColor: 'transparent', marginLeft:15}} >
+                                        <TouchableOpacity style={{
+                                            height: 65,
+                                            width: 65,
+                                            borderColor: '#7CD1E9',
+                                            borderWidth: 2,
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: 'transparent',
+                                            alignSelf: 'center',
+                                            borderRadius: 65/2
+                                          }}
+                                            onPress={() => this.chathistory()}
+                                        >
+                                            <Image  source={imgA} style={styles.itemThreeeImage} />
+                                        </TouchableOpacity>
+                                        <Text style={styles.activetext}>User 1</Text>
+                                    </View>
+                                    <View style={{backgroundColor: 'transparent', marginLeft:15}} >
+                                        <TouchableOpacity style={{
+                                            height: 65,
+                                            width: 65,
+                                            borderColor: '#7CD1E9',
+                                            borderWidth: 2,
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: 'transparent',
+                                            alignSelf: 'center',
+                                            borderRadius: 65/2
+                                          }}
+                                            onPress={() => this.chathistory()}
+                                        >
+                                            <Image  source={imgB} style={styles.itemThreeeImage} />
+                                        </TouchableOpacity>
+                                        <Text style={styles.activetext}>User 1</Text>
+                                    </View>
+                                    <View style={{backgroundColor: 'transparent', marginLeft:15}} >
+                                        <TouchableOpacity style={{
+                                            height: 65,
+                                            width: 65,
+                                            borderColor: '#7CD1E9',
+                                            borderWidth: 2,
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: 'transparent',
+                                            alignSelf: 'center',
+                                            borderRadius: 65/2
+                                          }}
+                                            onPress={() => this.chathistory()}
+                                        >
+                                            <Image  source={imgC} style={styles.itemThreeeImage} />
+                                        </TouchableOpacity>
+                                        <Text style={styles.activetext}>User 1</Text>
+                                    </View>
+                                </ScrollView>
+                            </View>
                         </View>
-                        <View style={{paddingVertical:20}}>
-                            <ScrollView
-                                horizontal={true}
-                                showsHorizontalScrollIndicator={false}
-                                >
-                                <View style={{backgroundColor: 'transparent', marginLeft:15}} >
-                                    <TouchableOpacity style={{
-                                        height: 80,
-                                        width: 80,
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        backgroundColor: 'transparent',
-                                        alignSelf: 'center',
-                                        borderRadius: 80/2
-                                      }}
-                                        onPress={() => this.chathistory()}
-                                    >
-                                        <Image  source={Avatar} style={styles.itemThreeeImage} />
-                                    </TouchableOpacity>
-                                    <Text style={[styles.activetext,{justifyContent: 'center',
-                                    textAlign: 'center',fontSize:14,fontWeight:'bold'}]}>User 1</Text>
-                                </View>
-                                <View style={{backgroundColor: 'transparent', marginLeft:15}} >
-                                    <TouchableOpacity style={{
-                                        height: 80,
-                                        width: 80,
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        backgroundColor: 'transparent',
-                                        alignSelf: 'center',
-                                        borderRadius: 80/2
-                                      }}
-                                    >
-                                        <Image  source={Avatar} style={styles.itemThreeeImage} />
-                                    </TouchableOpacity>
-                                     <Text style={[styles.activetext,{justifyContent: 'center',
-                                    textAlign: 'center',fontSize:14,fontWeight:'bold'}]}>User 2</Text>
-                                </View>
-                                <View style={{backgroundColor: 'transparent', marginLeft:15}} >
-                                    <TouchableOpacity style={{
-                                        height: 80,
-                                        width: 80,
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        backgroundColor: 'transparent',
-                                        alignSelf: 'center',
-                                        borderRadius: 80/2
-                                      }}
-                                    >
-                                        <Image  source={Avatar} style={styles.itemThreeeImage} />
-                                    </TouchableOpacity>
-                                    <Text style={[styles.activetext,{justifyContent: 'center',
-                                    textAlign: 'center',fontSize:14,fontWeight:'bold'}]}>User 3</Text>
-                                </View>
-                                <View style={{backgroundColor: 'transparent', marginLeft:15}} >
-                                    <TouchableOpacity style={{
-                                        height: 80,
-                                        width: 80,
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        backgroundColor: 'transparent',
-                                        alignSelf: 'center',
-                                        borderRadius: 80/2
-                                      }}
-                                    >
-                                        <Image  source={Avatar} style={styles.itemThreeeImage} />
-                                    </TouchableOpacity>
-                                     <Text style={[styles.activetext,{justifyContent: 'center',
-                                    textAlign: 'center',fontSize:14,fontWeight:'bold'}]}>User 4</Text>
-                                </View>
-                                <View style={{backgroundColor: 'transparent', marginLeft:15}} >
-                                    <TouchableOpacity style={{
-                                        height: 80,
-                                        width: 80,
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        backgroundColor: 'transparent',
-                                        alignSelf: 'center',
-                                        borderRadius: 80/2
-                                      }}
-                                    >
-                                        <Image  source={Avatar} style={styles.itemThreeeImage} />
-                                    </TouchableOpacity>
-                                     <Text style={[styles.activetext,{justifyContent: 'center',
-                                    textAlign: 'center',fontSize:14,fontWeight:'bold'}]}>User 5</Text>
-                                </View>
-                                <View style={{backgroundColor: 'transparent', marginLeft:15}} >
-                                    <TouchableOpacity style={{
-                                        height: 80,
-                                        width: 80,
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        backgroundColor: 'transparent',
-                                        alignSelf: 'center',
-                                        borderRadius: 80/2
-                                      }}
-                                    >
-                                        <Image  source={Avatar} style={styles.itemThreeeImage} />
-                                    </TouchableOpacity>
-                                     <Text style={[styles.activetext,{justifyContent: 'center',
-                                    textAlign: 'center',fontSize:14,fontWeight:'bold'}]}>User 6</Text>
-                                </View>
-                            </ScrollView>
-                        </View>
-                        <View style={styles.itemThreeHrBotDetail} />
-                        <View style={{marginLeft:10,flex:1,paddingVertical: 10}}>
-                            <Text style={styles.minHeading}>
+                        <View style={{marginLeft:15,flex:1,paddingVertical: 10}}>
+                            <Text style={styles.chathistory}>
                                 Chat History
                             </Text>
                         </View>
                         <View>
                              <ScrollView style={styles.scrollcontainer} contentContainerStyle={{ paddingBottom: 20 }}>
-                                <View>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 1</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                <View style={styles.itemWhiteBox}>
+                                      <TouchableHighlight
+                                        underlayColor='transparent'
+                                        style={styles.highlightBox}
+                                        onPress={this.props.onPressButton}
+                                      >
+                                    <View style={styles.listItemBox}>
+                                      <View style={styles.leftCol}>
+                                        <View style={styles.avatar}>
+                                          <Image
+                                            source={imgA}
+                                            style={{width: 60, height: 60,borderRadius: 60 / 2}}
+                                          /> 
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 2</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                        <View style={[styles.info,{marginLeft: 5}]}>
+                                          <Text style={[
+                                            styles.itemHeaderText,
+                                            styles.blackColor,
+                                            styles.mediumBold
+                                          ]}>
+                                            Alex
+                                          </Text>
+                                          <Text style={[
+                                            styles.shortSmallText,
+                                             styles.blackColor,
+                                            styles.regularBold,
+                                          ]}>
+                                            Hello how are you?
+                                          </Text>
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 3</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                      </View>
+                                      <View style={styles.rightCol}>
+                                        <View style={styles.ranking}>
+                                          <Text style={[
+                                               styles.timeSmallText,
+                                            styles.lightgreyColor,
+                                            styles.regularBold,
+                                            {marginTop: -6, marginLeft: 2}
+                                          ]}>
+                                            11:36 pm
+                                          </Text>
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 4</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                      </View>
+                                    </View>
+                                  </TouchableHighlight>
+                                </View>
+                                <View style={styles.itemWhiteBox}>
+                                      <TouchableHighlight
+                                        underlayColor='transparent'
+                                        style={styles.highlightBox}
+                                        onPress={this.props.onPressButton}
+                                      >
+                                    <View style={styles.listItemBox}>
+                                      <View style={styles.leftCol}>
+                                        <View style={styles.avatar}>
+                                          <Image
+                                            source={imgB}
+                                            style={{width: 60, height: 60,borderRadius: 60 / 2}}
+                                          /> 
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 5</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                        <View style={[styles.info,{marginLeft: 5}]}>
+                                          <Text style={[
+                                            styles.itemHeaderText,
+                                            styles.blackColor,
+                                            styles.mediumBold
+                                          ]}>
+                                            Alex
+                                          </Text>
+                                          <Text style={[
+                                            styles.shortSmallText,
+                                             styles.blackColor,
+                                            styles.regularBold,
+                                          ]}>
+                                            Hello how are you?
+                                          </Text>
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 6</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                      </View>
+                                      <View style={styles.rightCol}>
+                                        <View style={styles.ranking}>
+                                          <Text style={[
+                                               styles.timeSmallText,
+                                            styles.lightgreyColor,
+                                            styles.regularBold,
+                                            {marginTop: -6, marginLeft: 2}
+                                          ]}>
+                                            11:36 pm
+                                          </Text>
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 7</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                      </View>
+                                    </View>
+                                  </TouchableHighlight>
+                                </View>
+                                <View style={styles.itemWhiteBox}>
+                                      <TouchableHighlight
+                                        underlayColor='transparent'
+                                        style={styles.highlightBox}
+                                        onPress={this.props.onPressButton}
+                                      >
+                                    <View style={styles.listItemBox}>
+                                      <View style={styles.leftCol}>
+                                        <View style={styles.avatar}>
+                                          <Image
+                                            source={imgB}
+                                            style={{width: 60, height: 60,borderRadius: 60 / 2}}
+                                          /> 
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 8</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                        <View style={[styles.info,{marginLeft: 5}]}>
+                                          <Text style={[
+                                            styles.itemHeaderText,
+                                            styles.blackColor,
+                                            styles.mediumBold
+                                          ]}>
+                                            Alex
+                                          </Text>
+                                          <Text style={[
+                                            styles.shortSmallText,
+                                             styles.blackColor,
+                                            styles.regularBold,
+                                          ]}>
+                                            Hello how are you?
+                                          </Text>
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 9</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
+                                      </View>
+                                      <View style={styles.rightCol}>
+                                        <View style={styles.ranking}>
+                                          <Text style={[
+                                               styles.timeSmallText,
+                                            styles.lightgreyColor,
+                                            styles.regularBold,
+                                            {marginTop: -6, marginLeft: 2}
+                                          ]}>
+                                            11:36 pm
+                                          </Text>
                                         </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 10</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
-                                        </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity
-                                    style={styles.itemThreeContainer} >
-                                        <View style={styles.itemContailner}>
-                                            <View style={styles.itemThreeSubContainer}>
-                                                <Image  source={Avatar} style={styles.itemThreeImage} />
-                                                    <View style={styles.itemThreeContent}>
-                                                        <View style={{marginTop:10}}>
-                                                            <Text style={styles.itemThreeTitle}>User 11</Text>
-                                                            <Text style={styles.itemThreeSubtitle} numberOfLines={1}>
-                                                                Users Last Messages....
-                                                            </Text>
-                                                        </View>
-                                                    </View>
-                                            </View>
-                                        </View>
-                                        <View style={styles.itemThreeHr} />
-                                    </TouchableOpacity>
+                                      </View>
+                                    </View>
+                                  </TouchableHighlight>
                                 </View>
                             </ScrollView>
                         </View>

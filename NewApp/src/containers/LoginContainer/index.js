@@ -53,35 +53,59 @@ class LoginForm extends Component {
       </Item>
     );
   }
-
+  authGet(response){
+      let collection={}
+        collection.username=response.status,
+        collection.password=this.props.loginForm.values.password
+      var url = 'https://dev.botsify.com/oauth/token'
+       fetch(url, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+            'Content-Type': 'application/json',
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(collection), // body data type must match "Content-Type" header
+    })
+    .then(response => response.json())
+           .then(response => { 
+           console.log('response')
+           console.log(response)
+               this.props.navigation.navigate("BotDetail")
+               
+           console.log('response')
+       })
+        .catch(error => console.error('Error:', error));
+  }
   login() {
       this.props.navigation.navigate("Home")
-//    if (this.props.valid) {
-//      let { email, password } = this.props.loginForm.values;
-//      if (email === "demo@gmail.com"){
-//        this.props.loginSuccess({email, password});
-//      } else {
-//        this.props.loginFail({email, password});
-//      }
-//    } else {
-//      Toast.show({
-//        text: "Enter Valid Username & password!",
-//        duration: 2000,
-//        position: "top",
-//        textStyle: { textAlign: "center" }
-//      });
+//      console.log(this.props.loginForm.values)
+//      let collection={}
+//        collection.email=this.props.loginForm.values.email,
+//        collection.password=this.props.loginForm.values.password
+//      var url = 'https://dev.botsify.com/api/v1/login'
+//       fetch(url, {
+//        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+//        headers: {
+//            'Content-Type': 'application/json',
+//            // 'Content-Type': 'application/x-www-form-urlencoded',
+//        },
+//        body: JSON.stringify(collection), // body data type must match "Content-Type" header
+//    })
+//    .then(response => response.json())
+//           .then(response => { 
+//          this.authGet(response)
+//       })
+//        .catch(error => console.error('Error:', error));
 //    }
-  }
-
-  onPressSwitch(){
-    let { counter } = this.state;
-    this.setState({
-      counter: counter + 1
-    }, () => {
-      if (this.state.counter === 8){
-        this.props.navigation.navigate("SwitchEnv");
-      }
-    });
+//  onPressSwitch(){
+//    let { counter } = this.state;
+//    this.setState({
+//      counter: counter + 1
+//    }, () => {
+//      if (this.state.counter === 8){
+//        this.props.navigation.navigate("SwitchEnv");
+//      }
+//    });
   }
 
   render() {

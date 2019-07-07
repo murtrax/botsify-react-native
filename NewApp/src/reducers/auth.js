@@ -19,6 +19,8 @@ export default (state = initialState, action) => {
       };
     case ACTION_TYPES.USER_LOGIN_SUCCESS:
       console.log(payload);
+          this.props.navigation.navigate("Home")
+          console.log(payload.data.status)
       return {
         token: payload.data.token,
         isAuthenticating: false,
