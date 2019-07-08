@@ -5,5 +5,8 @@ export default {
   inputText: {
     marginLeft: 17,
     fontSize: 17
+  },shadow:{
+       marginTop: 5,
+      
   }
 };

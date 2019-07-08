@@ -113,11 +113,13 @@ class LoginForm extends Component {
       <Form>
         <Field
           name="email"
+            style={styles.shadow}
           component={this.renderInput}
           validate={[emailFormat, required]}
         />
         <Field
           name="password"
+        style={styles.shadow}
           component={this.renderInput}
           validate={[alphaNumeric, required]}
         />
