@@ -17,8 +17,8 @@ export default class Home extends Component {
   }
   render() {
          const shadowOpt = {
-            width:150,
-            height:150,
+            width:120,
+            height:120,
             color:"#000000",
             border:8,
             radius:8,
@@ -77,30 +77,7 @@ export default class Home extends Component {
                         </TouchableOpacity>
                     </BoxShadow>
                 </View>
-                <View style={styles.row}>
-                    <BoxShadow setting={shadowOpt}>
-                        <TouchableOpacity
-                          style={styles.item}>
-                            <Image
-                                resizeMode="contain"
-                                source={Avatar}
-                                style={styles.itemImage}
-                              />
-                            <Text style={styles.itemText}>Bot 3</Text>
-                        </TouchableOpacity>
-                    </BoxShadow>
-                    <BoxShadow setting={shadowOpt}>
-                        <TouchableOpacity
-                          style={styles.item}>
-                            <Image
-                                resizeMode="contain"
-                                source={Avatar}
-                                style={styles.itemImage}
-                              />
-                            <Text style={styles.itemText}>Bot 3</Text>
-                        </TouchableOpacity>
-                    </BoxShadow>
-                </View>
+                
             </Content>                        
       </Container>
     );

@@ -38,8 +38,8 @@ export default {
     },
     item: {
         flex: 1,
-        height: 150,
-        width: 150,
+        height: 120,
+        width: 120,
         backgroundColor: '#ffffff',
         borderColor: '#7CD1E9',
         borderWidth: 2,
@@ -63,7 +63,7 @@ export default {
     },
 
     YourBotText: {
-        alignSelf: "center",
+        marginLeft: 20,
         marginTop: 15,
         marginBottom: 15,
         fontSize: 27,
@@ -86,9 +86,9 @@ export default {
     },
 
     itemText: {
-        fontSize:18,
-        fontWeight:'bold',
-        color: '#000000',
+        fontSize: 18,
+
+        color: 'rgb(19,19,19)',
         fontFamily: 'Lato-Regular',
     },
     headerimagestyle: {
