@@ -41,7 +41,7 @@ export default
     flex: 0.3
   },
 
-  chat:
+  chat2:
   {
     height: 30,
     width: 30,

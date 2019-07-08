@@ -30,7 +30,7 @@ export default class Home extends Component {
 
           </Left>
           <Body style={styles.headerBody}>
-            <Image style= {styles.chat}
+            <Image style= {styles.chat2}
               source = {logo}>
             </Image>
           <Title style={styles.textBody}>Botsify</Title>

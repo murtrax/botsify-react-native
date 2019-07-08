@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { show } from "redux-modal";
-import Modal from "../../components/Modal";
+import {Modal} from "../../components/Modal";
 
 class ModalContainer extends Component {
 

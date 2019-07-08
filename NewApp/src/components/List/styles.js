@@ -5,10 +5,21 @@ export default
     alignSelf: "center",
     color: "#ffffff",
     fontSize: 25,
-    marginTop: 10,
+    marginTop: 8,
     marginLeft: 20,
     marginRight: 50
 
+  },
+
+  header:
+  {
+    noShadow,
+    BarStyle: "dark-content",
+    androidStatusBarColor: "#ffffff",
+    borderBottomWidth: 0,
+    backgroundColor: "#7CD1E9",
+    paddingLeft: 0,
+    paddingRight:0
   },
 
   backArrow:
@@ -16,6 +27,14 @@ export default
     height: 25,
     width: 25
 
+  },
+
+  chat2:
+  {
+    height: 30,
+    width: 30,
+    marginTop: 8,
+    marginLeft: 50
   },
 
   Arrow:
