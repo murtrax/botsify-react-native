@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Header, Left, Container, Body, Title, Button, Right, Icon, Text, Content, } from "native-base";
-import { StatusBar , View, Image, TouchableOpacity, ActivityIndicator, FlatList} from "react-native";
+import { StatusBar , View, Image, TouchableOpacity, ActivityIndicator, FlatList, Dimensions} from "react-native";
 import styles from "./styles";
 
 const avatar = require("../../../assets/avatar1.png");
+var count = 0;
 export default class Home extends Component {
 
   state = {
@@ -90,7 +91,7 @@ export default class Home extends Component {
       dataSource2: responseJson.bots,
       in: "stage2"
     });
-
+    count = Object.keys(responseJson.bots).length;
   }).catch(error => {
     console.log(error);});
 
@@ -105,7 +106,7 @@ export default class Home extends Component {
       return (
         <View>
         <ActivityIndicator/>
-        <Text>Loading {this.state.in} </Text>
+        <Text>Loading {this.state.in}{this.state.dataSource2.length} </Text>
         </View>
         
       )
@@ -114,7 +115,39 @@ export default class Home extends Component {
     else 
     {
       var data = this.state.dataSource2;
-      var array3 = [];
+      var arrayBots = [];
+      for (var i = 0; i < data.length; i = i + 2)
+      {
+
+        if ( i + 1 !== data.length)
+        {
+          arrayBots.push(
+            <View style={styles.BotViewHorizontal}>
+            <TouchableOpacity style={styles.BotViewLeft} onPress={() => this.props.navigation.navigate("Chat")}>
+              <Image source={avatar} style = {styles.BotImage}/>
+              <Text style={styles.BotNameText}>Bot {this.state.dataSource2[i].id}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.BotViewRight} onPress={() => this.props.navigation.navigate("Chat")}>
+            <Image source={avatar} style = {styles.BotImage}/>
+            <Text style={styles.BotNameText}>Bot {this.state.dataSource2[i + 1].id}</Text>
+            </TouchableOpacity>
+              </View>)
+        }
+
+        if (i + 1 === data.length)
+        {
+          arrayBots.push(
+            <View style={styles.BotViewHorizontal}>
+          <TouchableOpacity style={styles.BotViewLeft} onPress={() => this.props.navigation.navigate("Chat")}>
+            <Image source={avatar} style = {styles.BotImage}/>
+            <Text style={styles.BotNameText}>Bot {this.state.dataSource2[i].id}</Text>
+            </TouchableOpacity>
+            </View>)
+           
+        }
+         }
+
+     
       return (
 
         <Container style={styles.container}>
@@ -135,13 +168,10 @@ export default class Home extends Component {
           <Right style={[styles.headerRight, {padding: 0}]}/>
         </Header>
 
-
-
-
         <Content style={{backgroundColor: "white", flex: 9}}>
 
         <View style={{flex: 1, alignSelf: "stretch"}}>
-
+          
     
           <View style={styles.BotsSection}>
 
@@ -152,29 +182,11 @@ export default class Home extends Component {
             </View>
 
             <View style={{flex:9}}>
-
-              <View style={styles.BotViewHorizontal}>
-                <TouchableOpacity style={styles.BotViewLeft} onPress={() => this.props.navigation.navigate("Chat")}>
-                  <Image source={avatar} style = {styles.BotImage}/>
-                  <Text style={styles.BotNameText}>Bot 1</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.BotViewRight} onPress={() => this.props.navigation.navigate("Chat")}>
-                <Image source={avatar} style = {styles.BotImage}/>
-                <Text style={styles.BotNameText}>Bot 2</Text>
-                </TouchableOpacity>
-              </View>
-
-              <View style={styles.BotViewHorizontal}>
-              <TouchableOpacity style={styles.BotViewLeft} onPress={() => this.props.navigation.navigate("Chat")}>
-                <Image source={avatar} style = {styles.BotImage}/>
-              <Text style={styles.BotNameText}>Bot 3</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.BotViewRight} onPress={() => this.props.navigation.navigate("Chat")}>
-                <Image source={avatar} style = {styles.BotImage}/>
-              <Text style={styles.BotNameText}>Bot 4</Text>
-              </TouchableOpacity>
-              </View>
-
+            
+            
+              {arrayBots}
+              
+              
             </View>
           </View>
 

@@ -95,6 +95,7 @@ export default {
     marginTop: 15,
     marginRight: 20,
     alignItems: "center",
+
   },
 
   BotNameText:{
