@@ -20,7 +20,8 @@ export default
 
   headerLeft:
   {
-    flex: 0.3
+    flex: 0.3,
+    padding: 0
   },
 
   headerBody:

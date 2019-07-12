@@ -3,7 +3,7 @@ import {Sidebar} from "../../components/Sidebar";
 import { connect } from "react-redux";
 import { userRequestLogout } from "../../actions";
 
-class SidebarContainer extends Component {
+export default class SidebarContainer extends Component {
   constructor(props) {
     super(props);
     this.data = [
@@ -47,7 +47,6 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(userRequestLogout())
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(SidebarContainer);
+ // export default connect(
+ //  null,
+ //  mapDispatchToProps)(SidebarContainer);

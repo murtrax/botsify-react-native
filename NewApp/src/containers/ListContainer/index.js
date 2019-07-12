@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import List from "../../components/List";
+import UserList from "../../components/UserList";
 
 export default class ListContainer extends Component {
   render() {
     return (
-      <List navigation={this.props.navigation}/>
+      <UserList navigation={this.props.navigation}/>
     );
   }
 }

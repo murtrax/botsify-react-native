@@ -1,17 +1,20 @@
-import React from 'react'
-import { GiftedChat } from 'react-native-gifted-chat'
+import React, {Component} from 'react'
 import {
   Header, Left, Container, Button, Body, Title, Right, Icon, Text, Content} from "native-base";
 import { StatusBar } from "react-native";
 import styles from "./styles";
-const logo = require("../../../assets/chat2.png");
-const arrow = require("../../../assets/back.png");
-const avatar = require("../../../assets/avatar.png");
-import {DrawerItems} from "react-native";
+
 import { Image, View, TouchableOpacity } from "react-native";
 
-export default class List extends React.Component
-{
+import { GiftedChat } from 'react-native-gifted-chat'
+
+export default class Chat extends Component {
+
+  onChat()
+   {
+     this.props.navigation.navigate("Chat")
+   }
+
   state = {
     messages: [],
   }
@@ -41,7 +44,6 @@ export default class List extends React.Component
 
   render() {
     return (
-
       <GiftedChat
         messages={this.state.messages}
         onSend={messages => this.onSend(messages)}
@@ -49,6 +51,6 @@ export default class List extends React.Component
           _id: 1,
         }}
       />
-      );
+    )
   }
 }
