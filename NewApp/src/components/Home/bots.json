@@ -1,0 +1,415 @@
+{
+    "bots": [
+        {
+            "id": 26878,
+            "description": "",
+            "application_key": "",
+            "application_secret": "",
+            "access_token": "EAAO2DNqGguUBAKZBG4p0cLwnYMXecdrUQK1bQJWXf8lrtw4ZBpp660esBZASCyp5zHNyLII787mvEipbIrGMgZAJpVGte8lB75ZAvzgDWiLEn1lpyLs2eGJihnIAe6Fz0w5FzZAOwMKdkQdqUW1h2mcUl2PfzcDfPrUpjKp1ZB4MVYPfGQPcyZAP",
+            "secret_key": "F5GdASMn1KFbPCT",
+            "token": "1jzC9t4iytZwjULPdMkC",
+            "status": 1,
+            "name": "test updated",
+            "user_id": 7637,
+            "created_at": "2018-09-10 05:38:02",
+            "updated_at": "2019-07-04 06:18:53",
+            "type": "Normal",
+            "page_id": "1894976427454380",
+            "page_name": "Test",
+            "auto_optin": 0,
+            "deleteOnDefault": 1,
+            "deleteOnTime": 1,
+            "apikey": "0QdRJzRf6DFRFuCrBiosI2JbY6p07sCqGrm2Icii",
+            "limit": 0,
+            "limitDate": null,
+            "active": 1,
+            "connection_type": "automatic",
+            "platform": 1,
+            "demo_token": null,
+            "code_embeded": 1,
+            "website": "dev.botsify.com",
+            "disable_reason": null,
+            "admin_ids": [
+                23287
+            ],
+            
+            "connectedUserCount": 0,
+            "bot_configs": [
+                {
+                    "id": 463,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-input-disabled",
+                    "value": "0",
+                    "bot_id": 26878,
+                    "created_at": "2019-01-04 07:21:57",
+                    "updated_at": "2019-07-04 06:29:22"
+                },
+                {
+                    "id": 639,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-preferred-language",
+                    "value": "english",
+                    "bot_id": 26878,
+                    "created_at": "2019-01-17 07:52:10",
+                    "updated_at": "2019-06-12 05:57:07"
+                },
+                {
+                    "id": 640,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-popup",
+                    "value": "0",
+                    "bot_id": 26878,
+                    "created_at": "2019-01-17 07:52:10",
+                    "updated_at": "2019-06-14 10:46:10"
+                },
+                {
+                    "id": 641,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-loginform",
+                    "value": "0",
+                    "bot_id": 26878,
+                    "created_at": "2019-01-17 07:52:10",
+                    "updated_at": "2019-07-09 08:06:54"
+                },
+                {
+                    "id": 677,
+                    "wizard_id": 2,
+                    "key": "human-help-form",
+                    "value": "1",
+                    "bot_id": 26878,
+                    "created_at": "2019-01-24 08:16:16",
+                    "updated_at": "2019-01-24 08:16:16"
+                },
+                {
+                    "id": 678,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-home-message",
+                    "value": "<p>How are you?</p>",
+                    "bot_id": 26878,
+                    "created_at": "2019-01-24 08:17:05",
+                    "updated_at": "2019-06-24 12:19:55"
+                },
+                {
+                    "id": 679,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-primary-color",
+                    "value": "#6896ff",
+                    "bot_id": 26878,
+                    "created_at": "2019-01-24 08:17:05",
+                    "updated_at": "2019-04-19 07:11:05"
+                },
+                {
+                    "id": 807,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-move-left",
+                    "value": "0",
+                    "bot_id": 26878,
+                    "created_at": "2019-02-07 05:16:39",
+                    "updated_at": "2019-02-07 05:16:39"
+                },
+                {
+                    "id": 896,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-icon-type",
+                    "value": "default",
+                    "bot_id": 26878,
+                    "created_at": "2019-03-01 06:08:59",
+                    "updated_at": "2019-06-17 06:03:38"
+                },
+                {
+                    "id": 904,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-secondary-color",
+                    "value": "#6896ff",
+                    "bot_id": 26878,
+                    "created_at": "2019-03-01 10:10:43",
+                    "updated_at": "2019-04-19 07:11:05"
+                },
+                {
+                    "id": 1017,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-bot-name",
+                    "value": "True Installer Support",
+                    "bot_id": 26878,
+                    "created_at": "2019-03-21 06:15:44",
+                    "updated_at": "2019-03-21 06:15:44"
+                },
+                {
+                    "id": 1025,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-bot-image",
+                    "value": "https://botsify-dev.s3.us-west-2.amazonaws.com/web-bot/avatars/26878.jpeg",
+                    "bot_id": 26878,
+                    "created_at": "2019-03-25 07:45:51",
+                    "updated_at": "2019-04-10 07:16:54"
+                },
+                {
+                    "id": 1085,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-menu-languages",
+                    "value": "English,Arabic,Spanish,French",
+                    "bot_id": 26878,
+                    "created_at": "2019-04-16 06:05:08",
+                    "updated_at": "2019-04-16 06:05:08"
+                },
+                {
+                    "id": 1121,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-composer-buttons",
+                    "value": "1",
+                    "bot_id": 26878,
+                    "created_at": "2019-04-18 07:16:20",
+                    "updated_at": "2019-04-18 07:16:20"
+                },
+                {
+                    "id": 1148,
+                    "wizard_id": 2,
+                    "key": "wizard_page",
+                    "value": "advance_settings",
+                    "bot_id": 26878,
+                    "created_at": "2019-04-30 06:04:52",
+                    "updated_at": "2019-07-01 11:15:15"
+                },
+                {
+                    "id": 1161,
+                    "wizard_id": 2,
+                    "key": "landing-bot-bg-image",
+                    "value": "",
+                    "bot_id": 26878,
+                    "created_at": "2019-05-22 07:22:12",
+                    "updated_at": "2019-05-22 07:22:47"
+                },
+                {
+                    "id": 1214,
+                    "wizard_id": 2,
+                    "key": "icon-as-get-started",
+                    "value": "0",
+                    "bot_id": 26878,
+                    "created_at": "2019-06-13 09:22:34",
+                    "updated_at": "2019-06-13 09:22:34"
+                },
+                {
+                    "id": 1219,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-default-launcher",
+                    "value": "0",
+                    "bot_id": 26878,
+                    "created_at": "2019-06-17 06:05:22",
+                    "updated_at": "2019-06-17 06:05:22"
+                },
+                {
+                    "id": 1239,
+                    "wizard_id": 2,
+                    "key": "q",
+                    "value": "/bot/wizard/configs",
+                    "bot_id": 26878,
+                    "created_at": "2019-07-03 08:49:46",
+                    "updated_at": "2019-07-03 08:49:46"
+                },
+                {
+                    "id": 1240,
+                    "wizard_id": 2,
+                    "key": "top-close-chat",
+                    "value": "1",
+                    "bot_id": 26878,
+                    "created_at": "2019-07-08 05:13:14",
+                    "updated_at": "2019-07-08 05:13:14"
+                }
+            ]
+        },
+        {
+            "id": 27254,
+            "description": "",
+            "application_key": "",
+            "application_secret": "",
+            "access_token": "",
+            "secret_key": "ARHbmwqaZgJ6Qub",
+            "token": "zqZAea8szZhTJUWdWEQv",
+            "status": 1,
+            "name": "HBL Bot",
+            "user_id": 7637,
+            "created_at": "2019-06-10 08:40:16",
+            "updated_at": "2019-07-04 06:18:53",
+            "type": "Normal",
+            "page_id": "",
+            "page_name": "",
+            "auto_optin": 0,
+            "deleteOnDefault": 1,
+            "deleteOnTime": 1,
+            "apikey": "zXcVAo9c0Hplnv9nD8qbket1LMGtOPpvOSh7mQJY",
+            "limit": 0,
+            "limitDate": null,
+            "active": 1,
+            "connection_type": "automatic",
+            "platform": 2,
+            "demo_token": null,
+            "code_embeded": 0,
+            "website": null,
+            "disable_reason": null,
+            "admin_ids": [],
+            "connectedUserCount": 0,
+            "bot_configs": [
+                {
+                    "id": 1207,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-loginform",
+                    "value": "0",
+                    "bot_id": 27254,
+                    "created_at": "2019-06-10 08:40:27",
+                    "updated_at": "2019-06-10 08:40:27"
+                },
+                {
+                    "id": 1208,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-bot-name",
+                    "value": "HBL Bot",
+                    "bot_id": 27254,
+                    "created_at": "2019-06-10 08:40:27",
+                    "updated_at": "2019-06-10 08:40:27"
+                },
+                {
+                    "id": 1209,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-home-message",
+                    "value": " Hey, want to talk to me? I can help instantly! ",
+                    "bot_id": 27254,
+                    "created_at": "2019-06-10 08:40:27",
+                    "updated_at": "2019-06-10 08:40:27"
+                },
+                {
+                    "id": 1210,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-icon-type",
+                    "value": "default",
+                    "bot_id": 27254,
+                    "created_at": "2019-06-10 08:40:27",
+                    "updated_at": "2019-06-10 08:40:27"
+                },
+                {
+                    "id": 1211,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-primary-color",
+                    "value": "#3db2d0",
+                    "bot_id": 27254,
+                    "created_at": "2019-06-10 08:40:27",
+                    "updated_at": "2019-06-10 08:40:27"
+                },
+                {
+                    "id": 1212,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-secondary-color",
+                    "value": "#3db2d0",
+                    "bot_id": 27254,
+                    "created_at": "2019-06-10 08:40:27",
+                    "updated_at": "2019-06-10 08:40:27"
+                },
+                {
+                    "id": 1213,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-preferred-language",
+                    "value": "english",
+                    "bot_id": 27254,
+                    "created_at": "2019-06-10 08:40:27",
+                    "updated_at": "2019-06-10 08:40:27"
+                }
+            ]
+        },
+        {
+            "id": 27255,
+            "description": "",
+            "application_key": "",
+            "application_secret": "",
+            "access_token": "",
+            "secret_key": "7hEjOuZVAGwPCfa",
+            "token": "6KxOys4M1sB1b5mtlFeE",
+            "status": 1,
+            "name": "first bot",
+            "user_id": 7637,
+            "created_at": "2019-06-18 05:55:10",
+            "updated_at": "2019-07-04 06:18:53",
+            "type": "Normal",
+            "page_id": "",
+            "page_name": "",
+            "auto_optin": 0,
+            "deleteOnDefault": 1,
+            "deleteOnTime": 1,
+            "apikey": "rM2MG3cWWEgeaj0JvABMLbNNlmGmdJuja5DkBsMb",
+            "limit": 0,
+            "limitDate": null,
+            "active": 1,
+            "connection_type": "automatic",
+            "platform": 2,
+            "demo_token": null,
+            "code_embeded": 0,
+            "website": null,
+            "disable_reason": null,
+            "admin_ids": [],
+            "connectedUserCount": 0,
+            "bot_configs": [
+                {
+                    "id": 1225,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-loginform",
+                    "value": "0",
+                    "bot_id": 27255,
+                    "created_at": "2019-06-18 05:55:26",
+                    "updated_at": "2019-06-18 05:55:26"
+                },
+                {
+                    "id": 1226,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-bot-name",
+                    "value": "first bot",
+                    "bot_id": 27255,
+                    "created_at": "2019-06-18 05:55:26",
+                    "updated_at": "2019-06-18 05:55:26"
+                },
+                {
+                    "id": 1227,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-home-message",
+                    "value": " Hey, want to talk to me? I can help instantly! ",
+                    "bot_id": 27255,
+                    "created_at": "2019-06-18 05:55:26",
+                    "updated_at": "2019-06-18 05:55:26"
+                },
+                {
+                    "id": 1228,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-icon-type",
+                    "value": "default",
+                    "bot_id": 27255,
+                    "created_at": "2019-06-18 05:55:26",
+                    "updated_at": "2019-06-18 05:55:26"
+                },
+                {
+                    "id": 1229,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-primary-color",
+                    "value": "#3db2d0",
+                    "bot_id": 27255,
+                    "created_at": "2019-06-18 05:55:26",
+                    "updated_at": "2019-06-18 05:55:26"
+                },
+                {
+                    "id": 1230,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-secondary-color",
+                    "value": "#3db2d0",
+                    "bot_id": 27255,
+                    "created_at": "2019-06-18 05:55:26",
+                    "updated_at": "2019-06-18 05:55:26"
+                },
+                {
+                    "id": 1231,
+                    "wizard_id": 2,
+                    "key": "website-chatbot-preferred-language",
+                    "value": "english",
+                    "bot_id": 27255,
+                    "created_at": "2019-06-18 05:55:26",
+                    "updated_at": "2019-06-18 05:55:26"
+                }
+            ]
+        }
+    ]
+}

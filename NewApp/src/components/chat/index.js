@@ -1,12 +1,35 @@
 import React, { Component } from "react";
 import { Header, Left, Container, Button, Body, Title, Right, Icon, Text, Content, Alert} from "native-base";
-import { StatusBar , View, Image, SectionList, StyleSheet, FlatList, TouchableOpacity, TouchableHighlight} from "react-native";
+import { StatusBar , View, Image, SectionList, StyleSheet, FlatList, TouchableOpacity, TouchableHighlight, ActivityIndicator} from "react-native";
 import styles from "./styles";
 //import { List, ListItem } from "react-native-elements";
 
 const avatar = require("../../../assets/avatar2.png");
 
 export default class Chat extends Component {
+
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      isLoading: true,
+      dataSource: true,
+    }
+  }
+
+  componentDidMount()
+  {
+    return fetch("https://facebook.github.io/react-native/movies.json")
+    .then((response) => response.json() )
+    .then((responseJson) => {
+
+    this.setState({
+      isLoading: false,
+      dataSource: responseJson.movies,
+    })
+
+  });
+  }
 
   state = {
     chatStrip : {marginLeft: 25,
@@ -39,8 +62,18 @@ export default class Chat extends Component {
   }
 
   render() {
+
+    if (this.state.isLoading)
+    {
+      return (
+        <View style={styles.container}>
+          <ActivityIndicator/>
+        </View>
+      )
+    }
     return (
       <Container style={styles.container}>
+        
         <StatusBar translucent={false} />
         <Header
           noShadow
@@ -99,8 +132,8 @@ export default class Chat extends Component {
 
 
               <SectionList
-                renderItem={({item, index, section}) =>  <View><TouchableHighlight onPress = {()=> this.shadow()}>
-                  <View style={this.state.chatStrip}>
+                renderItem={({item, index, section}) =>  <View><TouchableHighlight onPress={() => this.props.navigation.navigate("chatting")}>
+                  <View style={styles.chatStrip}>
                 <Image source={avatar} style = {styles.chatImage}/>
                 <View>
                   <View style={{flexDirection: "row"}}>
@@ -153,9 +186,7 @@ export default class Chat extends Component {
             </View>
         </View>
       </Content>
-      </Container>
-
-       
+      </Container> 
     );
   }
 }

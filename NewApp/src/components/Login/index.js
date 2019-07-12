@@ -11,7 +11,7 @@ export default class Login extends Component {
     return (
       <Container style={styles.container}>
         <StatusBar hidden={true}/>
-        <Spinner visible={this.props.loading}/>
+              
         <Content style={styles.content}>
           <Image source={logo} style={styles.logo}/>
           <View style={styles.containerForm}>

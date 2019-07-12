@@ -104,14 +104,17 @@ export default {
         fontWeight: "bold",
       },
 
-      chatStrip: {
-        marginLeft: 25,
+      chatStrip : {marginLeft: 25,
         marginRight: 25,
         marginBottom: 5,
-        borderColor: "black",
         borderWidth: 0,
         borderRadius: 4,
-      },
+        flexDirection: "row",
+        shadowColor: "#000",
+        shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        elevation: 3,    },
 
       chatImage: {
         margin: 13,
@@ -169,7 +172,7 @@ export default {
         marginRight: 0,
         marginTop: 10,
         marginBottom: 5,
-        marginLeft: 50,
+        marginLeft: 170,
       },
 
       horizontalLine: {
