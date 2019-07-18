@@ -17,6 +17,9 @@ class LoginForm extends Component {
     super(props);
     this.state = {
       counter: 0,
+      isLoading: false,
+      dataSource: [],
+      in: "stage0"
     };
   }
 
@@ -26,7 +29,7 @@ class LoginForm extends Component {
         let message = nextProps.auth.error;
         setTimeout(() => {
           Alert.alert("",message);
-        }, 100);
+        }, 1000);
       }
     }
 
@@ -35,6 +38,39 @@ class LoginForm extends Component {
         this.props.navigation.navigate("App");
       }
     }
+  }
+
+
+  fetchLogin = async()=>{ 
+    let formData = new FormData();
+    let { email, password } = this.props.loginForm.values;
+    console.log("fetchLogin");
+    console.log(email,password);
+  formData.append("email", email);
+  formData.append("password", password);
+
+
+    await fetch("https://dev.botsify.com/api/v1/login", {
+      method: "post",
+      body: formData,
+    })
+    
+
+    .then((response) => response.json() )
+    .then((responseJson) => {
+      console.log("LOGIN Stage");
+      console.log(responseJson);
+     
+    this.setState({
+      isLoading: false,
+      dataSource: responseJson,
+      in: "stage1",
+      counter: 0,
+    });
+    
+  }).catch(error => {
+    console.log(error);});
+
   }
 
   renderInput({ input, label, type, meta: { touched, error, warning } }) {
@@ -55,22 +91,32 @@ class LoginForm extends Component {
   }
 
   login() {
-      this.props.navigation.navigate("Home")
-//    if (this.props.valid) {
-//      let { email, password } = this.props.loginForm.values;
-//      if (email === "demo@gmail.com"){
-//        this.props.loginSuccess({email, password});
-//      } else {
-//        this.props.loginFail({email, password});
-//      }
-//    } else {
-//      Toast.show({
-//        text: "Enter Valid Username & password!",
-//        duration: 2000,
-//        position: "top",
-//        textStyle: { textAlign: "center" }
-//      });
-//    }
+
+      this.fetchLogin();
+
+      if (this.state.in === "stage0")
+      {
+
+      }
+
+    if (this.props.valid) {
+      let { email, password } = this.props.loginForm.values;
+      console.log("check credentials")
+      console.log(email, password)
+      if (email === this.state.dataSource.status){
+        this.props.loginSuccess({email, password});
+        this.props.navigation.navigate("Home")
+      } else {
+        this.props.loginFail({email, password});
+      }
+    } else {
+      Toast.show({
+        text: "Enter Valid Username & password!",
+        duration: 2000,
+        position: "top",
+        textStyle: { textAlign: "center" }
+      });
+    }
   }
 
   onPressSwitch(){

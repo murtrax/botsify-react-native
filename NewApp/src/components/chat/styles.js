@@ -1,4 +1,16 @@
+import { Row } from "native-base";
+
 export default {
+  loading: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: "center",
+    justifyContent: "center"
+
+  },
     container: {
       flex: 1,
     },
@@ -104,8 +116,7 @@ export default {
         fontWeight: "bold",
       },
 
-      chatStrip : {marginLeft: 25,
-        marginRight: 25,
+      chatStrip : {
         marginBottom: 5,
         borderWidth: 0,
         borderRadius: 4,
@@ -152,7 +163,8 @@ export default {
         marginLeft: 5,
         marginTop: 10,
         fontWeight: "bold",
-        flexDirection: "row",
+        flexDirection: "column",
+        
       },
 
       chatText:{
@@ -170,9 +182,9 @@ export default {
         textAlign: "right",
         alignSelf: "stretch",
         marginRight: 0,
-        marginTop: 10,
+        marginTop: 15,
         marginBottom: 5,
-        marginLeft: 170,
+        flexDirection: "column",
       },
 
       horizontalLine: {

@@ -1,72 +1,103 @@
 import React, { Component } from "react";
 import { Header, Left, Container, Button, Body, Title, Right, Icon, Text, Content, Alert} from "native-base";
-import { StatusBar , View, Image, SectionList, StyleSheet, FlatList, TouchableOpacity, TouchableHighlight, ActivityIndicator} from "react-native";
+import { StatusBar , View, Image, SectionList, StyleSheet, FlatList, TouchableOpacity, TouchableHighlight, ActivityIndicator, Dimensions} from "react-native";
 import styles from "./styles";
-//import { List, ListItem } from "react-native-elements";
 
 const avatar = require("../../../assets/avatar2.png");
+const screenWidth = Math.round(Dimensions.get("window").width);
+const screenHeight = Math.round(Dimensions.get("window").height);
+var access_token = "";
+var bot_id = "";
+var data = []
+var users = [];
+
+class ChatBox extends Component {
+  render () {    
+    return (
+
+      <View><TouchableHighlight onPress={() => this.props.navigation.navigate("chatting",
+      { bot_id: bot_id, fbId: this.props.fbId, access_token: access_token, name: this.props.name, id : this.props.id})}>
+      <View style={[styles.chatStrip, {marginLeft: screenWidth * 0.05 , marginRight: screenWidth * 0.05}]}>
+      <Image source={avatar} style = {styles.chatImage}/>
+      <View>
+        <View style={{flexDirection: "row"}}>
+      <Text style= {[styles.usernameChat, {width : screenWidth * 0.5}]}>{this.props.name}</Text>
+      <Text style={styles.timeText }> 11:57am</Text>
+      </View>
+      </View>
+
+    </View>
+    </TouchableHighlight>
+    </View>
+    )
+}
+}
 
 export default class Chat extends Component {
+
+  state = {
+    isLoading: true,
+    dataSource: [],
+  }
 
   constructor(props)
   {
     super(props);
-    this.state = {
-      isLoading: true,
-      dataSource: true,
-    }
+    var access_token1 = props.navigation.state.params.access_token;
+    var bot_id1 =  props.navigation.state.params.bot_id;
+    access_token = access_token1;
+    bot_id = bot_id1;
   }
 
   componentDidMount()
   {
-    return fetch("https://facebook.github.io/react-native/movies.json")
-    .then((response) => response.json() )
-    .then((responseJson) => {
 
-    this.setState({
-      isLoading: false,
-      dataSource: responseJson.movies,
-    })
+    let formData = new FormData();
 
-  });
-  }
+    formData.append("bot_id", bot_id);
 
-  state = {
-    chatStrip : {marginLeft: 25,
-      marginRight: 25,
-      marginBottom: 5,
-      borderWidth: 0,
-      borderRadius: 4,
-      flexDirection: "row",
-      shadowColor: "#000",
-      shadowOffset: { width: 2, height: 2 },
-      shadowOpacity: 0.8,
-      shadowRadius: 2,
-      elevation: 3,    }
-  }
+    return fetch("https://dev.botsify.com/api/v1/get-bot-users", {
+      method: "post",
+      headers: {
+        "Accept": "application/json",
+        "Authorization": "Bearer " + access_token
 
-  shadow = () => {
-    this.setState({
-      chatStrip: {shadowColor: "#000",
-      shadowOffset: { width: 2, height: 2 },
-      shadowOpacity: 0.8,
-      shadowRadius: 2,
-      elevation: 3,
-      marginLeft: 25,
-      marginRight: 25,
-      marginBottom: 5,
-      borderWidth: 0,
-      borderRadius: 4,
-      flexDirection: "row", }}
-    )
+      },
+      body: formData })
+    
+      .then((response) => response.json() )
+      .then((responseJson) => {
+        this.setState({
+          
+          dataSource: responseJson.messengerUsers,
+        })
+          data = this.state.dataSource;
+          console.log("data")
+          console.log(data);
+          users = [];
+          for (var i = 0; i < data.length; i++)
+            {
+              users.push(<ChatBox name = {data[i].name} navigation = {this.props.navigation} fbId = {data[i].fbId} id = {data[i].id}/>)
+            }
+
+            this.setState({
+          
+              isLoading: false,
+            })
+
+            
+    
+    }).catch(error => {
+      console.log(error);});
   }
 
   render() {
+    
 
     if (this.state.isLoading)
     {
       return (
-        <View style={styles.container}>
+        <View style={styles.loading}>
           <ActivityIndicator/>
         </View>
       )
@@ -104,7 +135,7 @@ export default class Chat extends Component {
               <Text style={styles.activeUsersText}>Active Users</Text>
               <View style={{}}>
                 <View style={{flexDirection: "row", paddingLeft: 15, paddingRight:15}}>
-                  <View style={{flex:1, marginBottom: 15}} >
+                  <View style={{flex:1, marginBottom: 15, alignContent: "center"}} >
                     <Image source={avatar} style = {styles.userImage}/>
                     <Text style={styles.usernameText}> Jon</Text>
                   </View>
@@ -128,17 +159,37 @@ export default class Chat extends Component {
               </View>
               </View>
 
+              <View style = {{marginTop: 10}}> 
+              {users}
+              </View>
+            </View>
+        </View>
+      </Content>
+      </Container> 
+    );
+  }
+}
 
 
 
-              <SectionList
+
+
+
+
+
+
+
+
+
+
+{/*<SectionList
                 renderItem={({item, index, section}) =>  <View><TouchableHighlight onPress={() => this.props.navigation.navigate("chatting")}>
                   <View style={styles.chatStrip}>
                 <Image source={avatar} style = {styles.chatImage}/>
                 <View>
                   <View style={{flexDirection: "row"}}>
                 <Text style= {styles.usernameChat}>Roger</Text>
-                <Text style={styles.timeText}> 11:57am</Text>
+                <Text style={[styles.timeText, {marginLeft: screenWidth * 0.35}]}> 11:57am</Text>
                 </View>
                 
                 <View style={{flexDirection: "column"}}>
@@ -149,47 +200,23 @@ export default class Chat extends Component {
               </View>
               </TouchableHighlight>
 
-              {/*<View style={{
-                borderBottomColor: "black",
-                borderBottomWidth: 1, flexDirection: "column", marginLeft: 110, marginRight: 40
-              }}
-            />*/}
-
               </View>
 
             }
                 renderSectionHeader={({section: {title}}) => (
                   <Text style={styles.chatUsersText}>Chat Users</Text>
                 )}
+                
                 sections={[
                   {title: "Title1", data: ["Roger", "What Are You Doing ?"],
                   title1 : "Title2", data1: ["Roger", "What Are You Doing ?"]},
                 ]}
+
+                
+
                 keyExtractor={(item, index) => item + index}
               />
-     
-             { /*<View style={{flex: 8}}>
-                <Text style={styles.chatUsersText}>Chat Users</Text>
-              <View style={styles.chatStrip}>
-                <Image source={avatar} style = {styles.chatImage}/>
-                <Text>Helloo</Text>
-              </View>
-              <View style={styles.chatStrip}>
-                <Image source={avatar} style = {styles.chatImage}/>
-                <Text>Helloo</Text>
-                
-              </View>
-              
-              </View>*/ }
-
-
-            </View>
-        </View>
-      </Content>
-      </Container> 
-    );
-  }
-}
+*/}
 
 
 

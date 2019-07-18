@@ -1,4 +1,15 @@
 export default {
+  loading: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: "center",
+    justifyContent: "center"
+
+  },
+  
 Container: {
     flex: 1,
   },
@@ -24,7 +35,7 @@ Container: {
     alignSelf: "center",
     marginTop: 5,
     marginBottom: 10,
-    fontSize: 27,
+    fontSize: 20,
     color: "white",
     fontWeight: "bold",
     fontFamily: "sans-serif-thin"
